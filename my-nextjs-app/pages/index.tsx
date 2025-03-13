@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           <ul>
           {profile.topRepos.map((repo: any) => (
             <li key={repo.id}>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+            <a className={styles.link} href={repo.html_url} target="_blank" rel="noopener noreferrer">
               {repo.name}
             </a>
             </li>
@@ -73,7 +73,7 @@ const Home: React.FC = () => {
           </ul>
         </div>
         )}
-        <a href={profile.html_url} target="_blank" rel="noopener noreferrer">
+        <a className={styles.link} href={profile.html_url} target="_blank" rel="noopener noreferrer">
         View Profile
         </a>
       </div>

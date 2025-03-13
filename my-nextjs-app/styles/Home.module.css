@@ -42,3 +42,16 @@
 .button:hover {
   background: #333;
 }
+
+.avatar {
+  height: 150px;
+  width: auto;
+}
+
+.profile {
+  padding-top: 50px;
+}
+
+.link {
+  text-decoration: underline;
+}
