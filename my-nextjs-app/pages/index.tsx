@@ -41,14 +41,15 @@ const Home: React.FC = () => {
       Search for a GitHub user profile by entering their username in the search box below.
       </p>
       <div className={styles.search}>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Enter GitHub username"
-        className={styles.input}
-      />
-      <button onClick={handleSearch} className={styles.button}>Search</button>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter GitHub username"
+          className={styles.input}
+          style={{ marginRight: '25px' }}
+        />
+        <button onClick={handleSearch} className={styles.button}>Search</button>
       </div>
       {errorMessage && <p className={styles.error}>{errorMessage}</p>}
       {profile && (

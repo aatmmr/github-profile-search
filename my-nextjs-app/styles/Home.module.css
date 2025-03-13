@@ -9,10 +9,36 @@
 
 .title {
   font-size: 4rem;
-  color: #0070f3;
+  color: #000000;
 }
 
 .description {
   font-size: 1.5rem;
   color: #666;
+}
+
+.input {
+    height: 50px;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button {
+  height: 50px;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: #333;
 }
