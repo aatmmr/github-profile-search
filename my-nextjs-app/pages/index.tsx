@@ -37,6 +37,8 @@ const Home: React.FC = () => {
         <img src={profile.avatar_url} alt="Avatar" className={styles.avatar} />
         <h2>{profile.name}</h2>
         <p>{profile.bio}</p>
+        <p>Repositories: {profile.public_repos}</p>
+        <p>Followers: {profile.followers}</p>
         <a href={profile.html_url} target="_blank" rel="noopener noreferrer">
         View Profile
         </a>
