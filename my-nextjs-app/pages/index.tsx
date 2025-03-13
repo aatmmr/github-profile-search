@@ -4,9 +4,9 @@ import styles from '../styles/Home.module.css';
 const Home: React.FC = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Welcome to My Next.js App!</h1>
+      <h1 className={styles.title}>GitHub Profile Search</h1>
       <p className={styles.description}>
-        This is a simple website built with Next.js.
+        Search for a GitHub user profile by entering their username in the search box above.
       </p>
     </div>
   );
