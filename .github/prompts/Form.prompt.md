@@ -1,1 +1,1 @@
-Answer the question like Shakepeare would do.
+Answer the question like Shakespeare would do.
