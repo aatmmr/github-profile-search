@@ -16,11 +16,12 @@ const Home: React.FC = () => {
       }
       const data = await response.json();
 
-      // Fetch the top five repositories using the user's repos_url
-      const reposResponse = await fetch(`${data.repos_url}?per_page=5&sort=updated`);
+      // Fetch the top three repositories using the user's repos_url
+      const reposResponse = await fetch(`${data.repos_url}?per_page=100`);
       if (reposResponse.ok) {
         const repos = await reposResponse.json();
-        data.topRepos = repos;
+        repos.sort((a: any, b: any) => b.stargazers_count - a.stargazers_count);
+        data.topRepos = repos.slice(0, 3);
       } else {
         console.error('Error fetching repositories');
       }
@@ -61,12 +62,12 @@ const Home: React.FC = () => {
         <p>Followers: {profile.followers}</p>
         {profile.topRepos && profile.topRepos.length > 0 && (
         <div>
-          <h3>Top Repositories</h3>
+          <h3>Top 3 Starred Repositories</h3>
           <ul>
           {profile.topRepos.map((repo: any) => (
             <li key={repo.id}>
             <a className={styles.link} href={repo.html_url} target="_blank" rel="noopener noreferrer">
-              {repo.name}
+              {repo.name} (⭐ {repo.stargazers_count})
             </a>
             </li>
           ))}

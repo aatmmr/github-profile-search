@@ -1,0 +1,1 @@
+We use yarn as dependency manager. Take this into account when asking for dependencies.
