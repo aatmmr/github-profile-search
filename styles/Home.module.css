@@ -55,3 +55,28 @@
 .link {
   text-decoration: underline;
 }
+
+/* Dark theme styles */
+.home.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.title.dark {
+  color: #bb86fc;
+}
+
+.description.dark {
+  color: #e0e0e0;
+}
+
+.input.dark {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.button.dark {
+  background-color: #444;
+  color: #e0e0e0;
+}

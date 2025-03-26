@@ -26,3 +26,26 @@ ul {
 button {
   cursor: pointer;
 }
+
+/* Dark theme styles */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+a.dark {
+  color: #bb86fc;
+}
+
+h1.dark, h2.dark, h3.dark, h4.dark, h5.dark, h6.dark {
+  color: #e0e0e0;
+}
+
+ul.dark {
+  color: #e0e0e0;
+}
+
+button.dark {
+  background-color: #333;
+  color: #e0e0e0;
+}

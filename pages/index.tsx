@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 
-const Home: React.FC = () => {
+const Home: React.FC<{ theme: string, setTheme: (theme: string) => void }> = ({ theme, setTheme }) => {
   const [username, setUsername] = useState('');
   const [profile, setProfile] = useState<any>(null);
-
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleSearch = async () => {
@@ -34,8 +33,12 @@ const Home: React.FC = () => {
     }
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${theme === 'dark' ? styles.dark : ''}`}>
       <h1 className={styles.title}>GitHub Profile Search</h1>
       <p className={styles.description}>
       Search for a GitHub user profile by entering their username in the search box below.
@@ -51,6 +54,9 @@ const Home: React.FC = () => {
         />
         <button onClick={handleSearch} className={styles.button}>Search</button>
       </div>
+      <button onClick={toggleTheme} className={styles.button}>
+        Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme
+      </button>
       {errorMessage && <p className={styles.error}>{errorMessage}</p>}
       {profile && (
       <div className={styles.profile}>
